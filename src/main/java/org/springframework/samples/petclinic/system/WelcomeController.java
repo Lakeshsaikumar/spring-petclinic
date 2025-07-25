@@ -22,9 +22,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 class WelcomeController {
 
+	// @GetMapping("/")
+	// public String welcome() {
+	// 	return "welcome";
+	// }
+
 	@GetMapping("/")
-	public String welcome() {
-		return "welcome";
+	public String show(Model model) {
+	    model.addAttribute("title", "Lakesh");
+	    return "attributes/index";
 	}
 
 }
