@@ -1,9 +1,9 @@
 FROM eclipse-temurin:17-jdk-alpine
 
-WORKDIR /app
+WORKDIR /opt/app/jars/
 
 # Copy JAR file to the container
-COPY target/opt/app/jars/spring-petclinic-*.jar app.jar
+COPY target/spring-petclinic-*.jar app.jar
 
 EXPOSE 8080
 
