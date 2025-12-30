@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - Node1
+name: Build and deploy JAR app to Azure Web App - node1
 
 on:
   push:
@@ -49,15 +49,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_52CE32B9B9C54AABA324A658C1D9991E }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_F9317B8838524FE592DF8D869D82B3B3 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_27532127076646EBA150F5B15F46CD78 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_DE1F8645334B4C62A85A24236628A4FC }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_6A0004C1B8014993A543F071E4CE62C4 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_F3DE35B4B0CD4ABB87EBD1BE3D7E4F28 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'Node1'
+          app-name: 'node1'
           slot-name: 'Production'
           package: '*.jar'
           
